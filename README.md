@@ -19,6 +19,17 @@ __Part 1__: \# of trees with a slope of (3,1).<br>
 __Part 2__: Product of \# trees with slopes of ((1,1), (3,1), (5,1), (7,1), (1,2)).
 
 ## Day 4: Passport Processing
+Strings consisting of 'passport fields' -> parsed ensemble into passports and then check for validity.<br>
+__Part 1__: return \# of valid passports: all fields / or just missing country ID .<br>
+__Part 2__: return \# of valid passports: Also, additional checks on fields to be within a set of ranges.<br>
+
+## Day 5: Binary Boarding
+A sequence of letters, F/B for row \# & L/R for col \#, to decode a seat id on the plane. 
+__Part 1__: Return the highest seat id number on the list of inputs<br>
+__Part 2__: Find missing seat id (i.e. empty seat) <br>
 
 
-## Day 5:
+## Day 6: 
+
+__Part 1__: <br>
+__Part 2__: <br>
