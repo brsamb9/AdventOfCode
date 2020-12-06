@@ -29,7 +29,7 @@ __Part 1__: Return the highest seat id number on the list of inputs<br>
 __Part 2__: Find missing seat id (i.e. empty seat) <br>
 
 
-## Day 6: 
-
-__Part 1__: <br>
-__Part 2__: <br>
+## Day 6: Custom Customs
+Groups of people were given a form of 26 questions (mapped as a-z). The provided input contains the ensemble of groups and their letters that corresponds to questions with 'yes' answers.
+__Part 1__: return the total sum of unique yes answers per group. <br>
+__Part 2__: return the total sum of yes answers with a consensus in the group. <br>
