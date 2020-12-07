@@ -33,3 +33,9 @@ __Part 2__: Find missing seat id (i.e. empty seat) <br>
 Groups of people were given a form of 26 questions (mapped as a-z). The provided input contains the ensemble of groups and their letters that corresponds to questions with 'yes' answers.
 __Part 1__: return the total sum of unique yes answers per group. <br>
 __Part 2__: return the total sum of yes answers with a consensus in the group. <br>
+
+## Day 7: Handy Haversacks
+New rules enforced on luggage: colour-coded and specific quantities of other colour-coded bags. Your bag happens to be "shiny gold".
+e.g. "shiny gold bags contain 2 dark red bags.". It is important to notice the hierarchical nature of the given rules.<br>
+__Part 1__: return # of bag colors that can contain least one shiny gold bag? <br>
+__Part 2__: How many individual bags are required inside your single shiny gold bag? <br>
