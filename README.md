@@ -39,3 +39,10 @@ New rules enforced on luggage: colour-coded and specific quantities of other col
 e.g. "shiny gold bags contain 2 dark red bags.". It is important to notice the hierarchical nature of the given rules.<br>
 __Part 1__: return # of bag colors that can contain least one shiny gold bag? <br>
 __Part 2__: How many individual bags are required inside your single shiny gold bag? <br>
+
+
+## Day 8: Handheld Halting
+Game instructions of {acc: global accumulation, jmp: jump to instruction, nop: no operation} are provided with a value per line. But these are stuck in an infinite loop.
+__Part 1__: Return the accumulation of points before it goes into its next cycle in the infinite loop. <br>
+As there are no conditionals in this naive instruction set, whatever instruction we've jumped from before can be put into a hashset -> check if jumped from before == infinite loop.
+__Part 2__: Fix the infinite loop and return the completed accumulation. <br>
