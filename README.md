@@ -42,7 +42,12 @@ __Part 2__: How many individual bags are required inside your single shiny gold 
 
 
 ## Day 8: Handheld Halting
-Game instructions of {acc: global accumulation, jmp: jump to instruction, nop: no operation} are provided with a value per line. But these are stuck in an infinite loop.
+Game instructions of {acc: global accumulation, jmp: jump to instruction, nop: no operation} are provided with a value per line. But these are stuck in an infinite loop.<br>
 __Part 1__: Return the accumulation of points before it goes into its next cycle in the infinite loop. <br>
 As there are no conditionals in this naive instruction set, whatever instruction we've jumped from before can be put into a hashset -> check if jumped from before == infinite loop.
 __Part 2__: Fix the infinite loop and return the completed accumulation. <br>
+
+## Day 9: Encoding Error
+Non-standardised port outputs a series of encrypted numbers (an old cypher with an important weakness!). Starts: preamble of 25 numbers, then each number you receive should be the sum of any two of the 25 immediately previous numbers - may be more than one pair: __two numbers in a pair must be different__. <br>
+__Part 1__: What is the first number in the sequence that isn't the sum of two numbers in the moving window.<br>
+__Part 2__: Find the slice of an array that sums up to the previous invalid number in part 1 -> return sum of smallest and largest number of this.
