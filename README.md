@@ -51,3 +51,14 @@ __Part 2__: Fix the infinite loop and return the completed accumulation. <br>
 Non-standardised port outputs a series of encrypted numbers (an old cypher with an important weakness!). Starts: preamble of 25 numbers, then each number you receive should be the sum of any two of the 25 immediately previous numbers - may be more than one pair: __two numbers in a pair must be different__. <br>
 __Part 1__: What is the first number in the sequence that isn't the sum of two numbers in the moving window.<br>
 __Part 2__: Find the slice of an array that sums up to the previous invalid number in part 1 -> return sum of smallest and largest number of this.
+
+## Day 10: Adapter Array
+
+'Joltage' adapters rated by specific output joltage (input)
+- any adapter can take an input 1, 2, or 3 jolts lower than its rating and still produce its rated output joltage.
+- Your device has a built-in joltage adapter rated for 3 jolts higher than the highest-rated adapter in your bag
+- charging outlet near your seat as an effective joltage rating of 0
+
+
+
+
