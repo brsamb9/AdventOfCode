@@ -53,12 +53,6 @@ __Part 1__: What is the first number in the sequence that isn't the sum of two n
 __Part 2__: Find the slice of an array that sums up to the previous invalid number in part 1 -> return sum of smallest and largest number of this.
 
 ## Day 10: Adapter Array
-
-'Joltage' adapters rated by specific output joltage (input)
-- any adapter can take an input 1, 2, or 3 jolts lower than its rating and still produce its rated output joltage.
-- Your device has a built-in joltage adapter rated for 3 jolts higher than the highest-rated adapter in your bag
-- charging outlet near your seat as an effective joltage rating of 0
-
-
-
-
+User has a bag of 'Joltage' adapters rated by specific output joltage (input). Can link adapter if 1/2/3 less than its rating.<br>
+__Part 1__: Product of # 1-jolt differences multiplied by # 3-jolt differences<br>
+__Part 2__: # of distinct possible arrangements<br>
