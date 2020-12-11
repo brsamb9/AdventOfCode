@@ -1,5 +1,5 @@
 # AdventOfCode
-Fun daily challenges with two parter in Decemeber.
+Fun daily challenges with two parter in Decemeber. To get me posting to github more frequently! These mini-projects won't focus on error-handling too much as the given inputs are 'perfect' but will consist of small test cases to confirm correctness.
 
 ## Day 1: Report Repair
 Find the two entries in the list of numbers that sum to 2020 -> provide the product ..<br>
