@@ -56,3 +56,13 @@ __Part 2__: Find the slice of an array that sums up to the previous invalid numb
 User has a bag of 'Joltage' adapters rated by specific output joltage (input). Can link adapter if 1/2/3 less than its rating.<br>
 __Part 1__: Product of # 1-jolt differences multiplied by # 3-jolt differences<br>
 __Part 2__: # of distinct possible arrangements<br>
+
+## Day 11: Seating System
+Seat layout mapped as a grid of floor (.), empty seat (L), or occupied seat (#). All decisions are based on the number of occupied seats adjacent with the ruleset. Flip states of the seat if: 
+- Empty -> occupied if no occupied seats adjacent to it.
+- Occupied -> empty if four of more seats that are occupied adjacent.
+- Otherwise seat's state does not change.
+Like a naive version of game of life with two rules.<br>
+__Part 1__: As explained above. Count number of seats when states are in equilibrium.
+__Part 2__: Changes to ruleset, seats adjacent changes meaning to any occupied seats in all eight directions. Also changing states from occupied is changed from 4 to 5 adjacent.
+
