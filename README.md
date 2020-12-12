@@ -1,6 +1,6 @@
 # AdventOfCode
-Fun daily challenges with two parter in Decemeber. To get me posting to github more frequently! These mini-projects won't focus on error-handling too much as the given inputs are 'perfect' but will consist of small test cases to confirm correctness.
-
+Fun daily challenges with two parter in Decemeber. To get me posting to github more frequently! These mini-projects won't focus on error-handling too much as the given inputs are 'perfect' but will consist of small test cases to confirm correctness.<br>
+Days 1-11 (Rust); 12- (Golang)
 ## Day 1: Report Repair
 Find the two entries in the list of numbers that sum to 2020 -> provide the product ..<br>
 __Part 1__:  of two entries.<br>
@@ -44,7 +44,7 @@ __Part 2__: How many individual bags are required inside your single shiny gold 
 ## Day 8: Handheld Halting
 Game instructions of {acc: global accumulation, jmp: jump to instruction, nop: no operation} are provided with a value per line. But these are stuck in an infinite loop.<br>
 __Part 1__: Return the accumulation of points before it goes into its next cycle in the infinite loop. <br>
-As there are no conditionals in this naive instruction set, whatever instruction we've jumped from before can be put into a hashset -> check if jumped from before == infinite loop.
+As there are no conditionals in this naive instruction set, whatever instruction we've jumped from before can be put into a hashset -> check if jumped from before == infinite loop.<br>
 __Part 2__: Fix the infinite loop and return the completed accumulation. <br>
 
 ## Day 9: Encoding Error
@@ -62,7 +62,13 @@ Seat layout mapped as a grid of floor (.), empty seat (L), or occupied seat (#).
 - Empty -> occupied if no occupied seats adjacent to it.
 - Occupied -> empty if four of more seats that are occupied adjacent.
 - Otherwise seat's state does not change.
-Like a naive version of game of life with two rules.<br>
-__Part 1__: As explained above. Count number of seats when states are in equilibrium.
-__Part 2__: Changes to ruleset, seats adjacent changes meaning to any occupied seats in all eight directions. Also changing states from occupied is changed from 4 to 5 adjacent.
 
+Like a naive version of game of life with two rules.<br>
+__Part 1__: As explained above. Count number of seats when states are in equilibrium.<br>
+__Part 2__: Changes to ruleset, seats adjacent changes meaning to any occupied seats in all eight directions. Also changing states from occupied is changed from 4 to 5 adjacent.<br>
+
+## Day 12: Rain Risk - Switching to Golang for fun.
+Ferry navigation set: to move a direction { N : north, S: south, E: east, W: west, F: forward } with a given value or turn {L: left, R: right} given number of degrees. Starts by facing east - only the L and R actions change the direction the ship is facing. 
+Ferry's needs to evade.
+__Part 1__: Move ship as instruction - return the Manhattan distance from original placement <br>
+__Part 2__: Move waypoint relative to ship, and the ship itself. Return the Manhattan distance from original placment<br>
