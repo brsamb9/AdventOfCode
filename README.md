@@ -72,3 +72,9 @@ Ferry navigation set: to move a direction { N : north, S: south, E: east, W: wes
 Ferry's needs to evade.
 __Part 1__: Move ship as instruction - return the Manhattan distance from original placement <br>
 __Part 2__: Move waypoint relative to ship, and the ship itself. Return the Manhattan distance from original placment<br>
+
+## Day 13 Shuttle Search
+Bus schedule given with timestamps. <br>
+__Part 1__: Given a starting time, calculate the next departing bus's id multiplied by the additional waiting minutes.<br>
+__Part 2__: This was rather difficult, learnt about Chinese Remainder theorem - Rosetta code is an interesting website. Return the next bus such that all listed bus IDs depart at offsets matching their position in the list. <br>
+
