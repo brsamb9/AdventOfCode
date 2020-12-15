@@ -81,4 +81,9 @@ __Part 2__: This was rather difficult, learnt about Chinese Remainder theorem - 
 ## Day 14: Docking data [Go]
 Inserting values in memory influenced by a bitmask.<br>
 __Part 1__: What is the sum of all values left in memory after it completes?<br>
-__Part 2__: WIP (do tomorrow, ran out of time today)<br>
+__Part 2__: Bitmask applied on the memory location rather than value. With a twist<br>
+
+## Day 15: Rambunctious Recitation 
+Memory game -> dependent on the most recently spoken number. If number is unique -> next number will be 0; else the difference between the last two turn numbers that number had been said<br>.
+__Part 1__: the 2020th turn number spoken.<br>
+__Part 2__: Same, but determine the 30000000th number spoken. <br>

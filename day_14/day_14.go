@@ -9,48 +9,60 @@ import (
 	"strings"
 )
 
-var memory = make(map[int]int)
+var memoryP1 = make(map[int]int)
+var memoryP2 = make(map[int]int)
 
 func main() {
-	input, err := ioutil.ReadFile("day_14/input.txt")
+	input, err := ioutil.ReadFile("input.txt")
 	if err != nil {
 		panic(err)
 	}
 
 	lines := strings.Split(string(input), "\n")
-	// Map to contains memory locations and respected values - (defaulted to zero otherwise)
-	var mask string
+
+	// https://github.com/StefanSchroeder/Golang-Regex-Tutorial/blob/master/01-chapter2.markdown
 	re := regexp.MustCompile("mem\\[(\\d+)\\] = (\\d+)")
 
+	var mask string
 	for _, line := range lines {
 		if strings.HasPrefix(line, "mask") {
 			mask = strings.TrimSpace(strings.Split(line, "=")[1])
 		} else if strings.HasPrefix(line, "mem") {
-			// https://github.com/StefanSchroeder/Golang-Regex-Tutorial/blob/master/01-chapter2.markdown
 			addressValue := re.FindAllStringSubmatch(line, -1)[0]
 			address, _ := strconv.Atoi(addressValue[1])
 			value, _ := strconv.Atoi(addressValue[2])
 
-			memory[address] = applyMask(value, mask)
+			memoryP1[address] = applyMaskP1(value, mask)
+
+			address2 := applyMaskP2(address, mask)
+			for _, ad := range address2 {
+				memoryP2[ad] = value
+			}
 		}
 	}
 
 	fmt.Println("Part one: ", PartOne())
+	fmt.Println("Part one: ", PartTwo())
+
 }
 
-/*
-mask = "X11001110001101XX01111X1001X01101111"
-mem[32163] = 23587
-*/
 func PartOne() int {
 	var sumMemory int = 0
-	for _, mem := range memory {
+	for _, mem := range memoryP1 {
 		sumMemory += mem
 	}
 	return sumMemory
 }
 
-func applyMask(val int, mask string) int {
+func PartTwo() int {
+	var sumMemory int = 0
+	for _, mem := range memoryP2 {
+		sumMemory += mem
+	}
+	return sumMemory
+}
+
+func applyMaskP1(val int, mask string) int {
 	l := len(mask) - 1
 	for i := 0; i < len(mask); i++ {
 		bit := mask[l-i]
@@ -66,6 +78,41 @@ func applyMask(val int, mask string) int {
 	return val
 }
 
+func applyMaskP2(val int, mask string) []int {
+	floating := []int{}
+
+	l := len(mask) - 1
+	for i := 0; i < len(mask); i++ {
+		bit := mask[l-i]
+
+		switch bit {
+		case '1':
+			val = setBit(val, i, 1)
+		case 'X':
+			floating = append(floating, i)
+		}
+		// case '0' - unchanged
+	}
+
+	valuesLength := int(math.Pow(2, float64(len(floating))))
+	values := make([]int, valuesLength)
+
+	for i := 0; i < valuesLength; i++ {
+		for j, floatIndex := range floating {
+			bit := 1
+			if i&int(math.Pow(2, float64(j))) == 0 {
+				bit = 0
+			}
+
+			val = setBit(val, floatIndex, bit)
+		}
+
+		values[i] = val
+	}
+
+	return values
+}
+
 func setBit(val int, index int, bit int) int {
 	modBit := int(math.Pow(2, float64(index)))
 
@@ -74,8 +121,4 @@ func setBit(val int, index int, bit int) int {
 	}
 
 	return val | modBit
-}
-
-func PartTwo() {
-
 }
