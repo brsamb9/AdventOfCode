@@ -87,3 +87,13 @@ __Part 2__: Bitmask applied on the memory location rather than value. With a twi
 Memory game -> dependent on the most recently spoken number. If number is unique -> next number will be 0; else the difference between the last two turn numbers that number had been said<br>.
 __Part 1__: the 2020th turn number spoken.<br>
 __Part 2__: Same, but determine the 30000000th number spoken. <br>
+
+## Day 16: Ticket Translation
+Can only read numbers on tickets and other nearby tickets to gather the rules for the ticket fields.
+- e.g. 'class: 1-3 or 5-7' <- class field and any number in those inclusive ranges. 
+
+__Part 1__: Determine only completely invalid tickets (values not within any ranges).<br>
+__Part 2__: Remove those invalid tickets and return the product of 
+
+## Day 17: Conway Cubes
+An 'infinite' 3D grid of states -> active / inactive. 
